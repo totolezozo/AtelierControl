@@ -1,0 +1,954 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
+/* ======= Global Styles ======= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%; /* Utilisation maximale de l'espace */
+    max-width: 1600px; /* Augmentation de la largeur max */
+    margin: auto;
+}
+
+/* ======= Header ======= */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .header-info {
+      display:none !important;
+    }
+  }
+  
+.logo img {
+    max-height: 50px;
+}
+
+.header-info {
+    display: flex;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.info-box i {
+    margin-right: 8px;
+    color: #FFC527;
+    font-size: 18px;
+}
+
+/* ======= Social Icons ======= */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #494041;
+}
+
+/* ======= Banner Carousel ======= */
+#banner-carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Caption */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.carousel-caption p {
+    color: #FFC527;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    background: #FFC527;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #333;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    #banner-carousel {
+        height: 350px;
+    }
+
+    .carousel-caption {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .carousel-caption h4 {
+        font-size: 18px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 8px 15px;
+    }
+}
+
+/* ======= Presentation Section ======= */
+.presentation {
+    background: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.presentation h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.presentation .highlight {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFC527;
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    max-width: 800px;
+    margin: auto;
+    color: #494041;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ======= Features Section ======= */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 250px;
+    flex: 1;
+}
+
+.feature-item i {
+    font-size: 30px;
+    color: #FFC527;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #494041;
+}
+
+/* Responsive Features */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ======= Footer ======= */
+.footer {
+    background: #3A3233;  /* Dark gray background */
+    color: #D3CFCF; /* Light gray text */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ======= Left Section (Logo & Description) ======= */
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+
+.footer-left {
+    text-align: left;
+    max-width: 300px;
+}
+
+/* ======= Middle Section (Services & Zones) ======= */
+.footer-column {
+    text-align: left;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Footer Links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-column ul li i {
+    color: #FFC527;
+}
+
+
+
+/* ======= Services Section ======= */
+#services {
+    text-align: center;
+    padding: 50px 0;
+    background: white;
+}
+
+#services h2 {
+    font-size: 28px;
+    color: #494041;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Services Grid */
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Service */
+.service-item {
+    text-align: center;
+    max-width: 350px;
+    flex: 1;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Title */
+.service-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFC527;
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+}
+
+/* Service Description */
+.service-item p {
+    font-size: 16px;
+    color: #494041;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.service-item .button {
+    display: inline-block;
+    padding: 8px 15px;
+    background: white;
+    border: 2px solid #494041;
+    color: #494041;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.service-item .button:hover {
+    background: #494041;
+    color: white;
+}
+
+/* Responsive Services */
+@media (max-width: 992px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+/* ======= Certifications Section ======= */
+#certifications {
+    text-align: center;
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+
+#certifications h2 {
+    font-size: 28px;
+    color: #494041;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Certifications Grid */
+.certifications-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Certification Images */
+.certifications-list img {
+    width: 120px;  /* Adjusted size */
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(40%); /* Slight desaturation effect */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.certifications-list img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .certifications-list img {
+        width: 100px; /* Smaller size for mobile */
+    }
+}
+/* ====== Présentation Section ====== */
+.presentation {
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+
+.presentation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+/* ====== Présentation Texte (Gauche) ====== */
+.presentation-section {
+    flex: 1; /* Prend l'espace restant */
+    max-width: 55%;
+}
+
+/* ====== Formulaire de Devis (Droite) ====== */
+.quote-form-container {
+    width: 350px; /* Taille fixe pour qu'il ne soit pas trop grand */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-shrink: 0; /* Empêche de réduire la taille du formulaire */
+}
+
+/* ====== Form Header ====== */
+.quote-form-header {
+    background: #FFC527;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.quote-form-header i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* ====== Form Inputs ====== */
+.quote-form-container input,
+.quote-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.quote-form-container textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ====== Submit Button ====== */
+.quote-form-container button {
+    background: white;
+    color: #494041;
+    padding: 10px 15px;
+    border: 2px solid #494041;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.quote-form-container button:hover {
+    background: #494041;
+    color: white;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 1024px) {
+    .presentation-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentation-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .quote-form-container {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
+    }
+}
+
+
+/* MENU TOGGLE BUTTON */
+.menu-toggle {
+    display: none; /* Hidden on large screens */
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    background: #FFC527;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4px;
+    user-select: none;
+    margin: 10px auto;
+    width: 80px;
+}
+
+/* NAVBAR GENERAL STYLE */
+.navbar {
+    display: flex;
+    background: #FFC527;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* NAVIGATION MENU */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    color: #494041;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #494041;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFC527;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.submenu li a:hover {
+    background: #E6A500;
+}
+
+/* Show dropdown on hover for desktop */
+.navbar ul li:hover .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== RESPONSIVE MOBILE DESIGN ===== */
+@media screen and (max-width: 768px) {
+    .navbar .dropdown > a {
+        display: none !important;
+      }
+    /* Display MENU button */
+    .menu-toggle {
+        width: 100%; /* Button takes full width */
+        margin: 0;   /* Remove auto margins */
+        text-align: center; /* Ensure text is centered */
+        display: block;
+    }
+
+    /* Hide navbar by default on mobile */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* When the checkbox is checked, show the navbar */
+    .nav-toggle:checked + .menu-toggle + .navbar {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Mobile dropdown: using same approach but can be toggled via JavaScript or CSS if needed */
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        display: none;
+    }
+
+    .submenu.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.plomberie-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.plomberie-category {
+    flex: 1;
+    min-width: 280px;
+}
+
+.plomberie-category h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.plomberie-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.plomberie-category ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #494041;
+}
+/* Contrat d'Entretien Grid Layout */
+.entretien-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual Cards */
+.entretien-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    text-align: center;
+    border-top: 5px solid #FFC527;
+}
+
+/* Card Title */
+.entretien-card h4 {
+    background: #FFC527;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: -20px -20px 10px -20px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* List inside the cards */
+.entretien-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.entretien-card ul li {
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .entretien-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ====== Zones d'Intervention ====== */
+.zones-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.zones-list li {
+    font-size: 18px;
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+.zones-list .zone {
+    color: #FFC527;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.zones-list .zone:hover {
+    color: #494041;
+    text-decoration: underline;
+}
+
+.contact-link {
+    color: #FFC527;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #494041;
+}
+
+/* ===== Authentication Section ===== */
+#contact-section {
+    background: #f8f8f8;
+    padding: 50px 0;
+    justify-content: center;
+}
+
+/* Container for Login/Inscription Forms */
+.auth-grid {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual Auth Box (Login & Inscription) */
+.auth-box {
+    background: #fff;
+    border: 2px solid #FFC527;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 30px;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Push the inscription box to the right */
+.auth-grid .auth-box:last-child {
+    margin-left: auto;
+}
+
+.auth-box h3 {
+    font-size: 22px;
+    color: #494041;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.auth-box form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.auth-box form input:focus {
+    border-color: #FFC527;
+    box-shadow: 0 0 5px rgba(255,197,39,0.5);
+}
+
+.auth-box form button {
+    background: #FFC527;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-box form button:hover {
+    background: #494041;
+}
+
+/* Additional Text and Links */
+.auth-box p {
+    font-size: 14px;
+    color: #494041;
+}
+
+.auth-box p a {
+    color: #FFC527;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-box p a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Logged In State (Centered) ===== */
+#user-info {
+    background: #fff;
+    border: 2px solid #FFC527;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+#user-info h3 {
+    font-size: 22px;
+    color: #494041;
+    margin-bottom: 20px;
+}
+
+#user-info button {
+    background: #FFC527;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#user-info button:hover {
+    background: #494041;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media screen and (max-width: 768px) {
+    .auth-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .auth-grid .auth-box:last-child {
+        margin-left: 0;
+    }
+}

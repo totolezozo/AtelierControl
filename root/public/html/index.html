@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atelier Control - Plombier Chauffagiste</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="../js/index.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Atelier Control">
+            </div>
+            <div class="header-info">
+                <div class="info-box">
+                    <i class="fa fa-home"></i>
+                    <span>68 avenue du Général Leclerc<br><strong>94700 MAISONS-ALFORT</strong></span>
+                </div>
+                <div class="info-box">
+                    <i class="fa fa-phone"></i>
+                    <span>Contactez-nous<br><strong>01 41 79 30 35</strong></span>
+                </div>
+            </div>
+
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="menu-toggle">MENU</label>
+        <nav class="navbar">
+            <ul id="menu">
+                <li><a href="#presentation">ACCUEIL</a></li>
+                <li class="dropdown">
+                    <a href="#" class="no-autoscroll">SERVICES</a>
+                    <ul class="submenu">
+                        <li><a href="#climatisation">Climatisation</a></li>
+                        <li><a href="#plomberie">Plomberie</a></li>
+                        <li><a href="#chauffage">Chauffage</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contrat">CONTRAT D’ENTRETIEN</a></li>
+                <li><a href="#realisations">RÉALISATIONS</a></li>
+                <li><a href="#zones">ZONES D’INTERVENTION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="banner-carousel" class="carousel">
+        <div class="carousel-item active">
+            <img src="../images/banner1.jpg" alt="Chauffage - Plomberie">
+            <div class="carousel-caption">
+                <h4>Chauffage - Plomberie</h4>
+                <p>Nos plombiers qualifiés répondent à tous vos besoins : installation, entretien, dépannage.</p>
+                <a class="button" href="#">En savoir +</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../images/banner2.jpg" alt="Climatisation">
+            <div class="carousel-caption">
+                <h4>Climatisation</h4>
+                <p>Conseils et installation de systèmes de climatisation performants.</p>
+                <a class="button" href="#">En savoir +</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../images/banner3.jpg" alt="Contrats d'entretien">
+            <div class="carousel-caption">
+                <h4>Contrats d'entretien</h4>
+                <p>Garantissez la performance et l'économie de votre chauffage avec nos contrats d'entretien.</p>
+                <a class="button" href="#">En savoir +</a>
+            </div>
+        </div>
+    </section>
+
+<section class="presentation">
+    <div class="container presentation-wrapper">
+        <!-- Présentation à gauche -->
+        <section class="presentation-section" >
+            <h1>ATELIER CONTROL +</h1>
+            <h2 class="highlight">EXPERT CHAUFFAGISTE ET PLOMBIER À MAISONS-ALFORT</h2>
+            <p>
+                Créée par les frères Mariani, ATELIER CONTROL + est une entreprise basée sur le savoir-faire et 
+                l’expérience de professionnels.
+            </p>
+            <p>
+                Notre mission : apporter la meilleure solution aux besoins de nos clients, dans le souci permanent du travail bien fait.
+            </p>
+    
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fa fa-info-circle"></i>
+                    <h3>ACCOMPAGNEMENT +</h3>
+                    <p>Atelier Control + vous propose différents types de contrats d’entretien selon vos besoins.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-thumbs-up"></i>
+                    <h3>SAVOIR-FAIRE +</h3>
+                    <p>Une équipe d’artisans certifiés et expérimentés, pour l’ensemble de vos projets.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-leaf"></i>
+                    <h3>ÉCOLOGIE +</h3>
+                    <p>Réduisez vos dépenses et faites des économies d’énergie avec un système plus écologique.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-calendar"></i>
+                    <h3>RAPIDITÉ +</h3>
+                    <p>Réagir vite et respecter les délais d’intervention : votre temps est précieux, nous le savons.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Climatisation Section (Initially Hidden) -->
+        <section id="climatisation-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">CLIMATISATION</h2>
+                <h3 class="highlight">VENTE ET INSTALLATION DE CLIMATISATION DAIKIN, ELM LEBLANC</h3>
+                <p>
+                    Atelier Control + vous propose la vente et l’installation de climatiseurs à Maisons-Alfort et ses environs.
+                    Notre équipe qualifiée saura vous proposer les meilleurs produits de nos partenaires spécialisés 
+                    (Daikin, ELM Leblanc, ...).
+                </p>
+                <img src="../images/climatisation.jpg" alt="Installation de Climatisation">
+            </div>
+        </section>
+        <!-- Chauffage Section (Initially Hidden) -->
+        <section id="chauffage-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">CHAUFFAGE</h2>
+                <h2 class="highlight">Installation, Entretien, Dépannage</h2>
+                <p><strong>Atelier Control +</strong> et son équipe de <strong>chauffagistes qualifiés</strong>, vous proposent l’installation de chauffage, la mise en place d’un contrat d’entretien ou le dépannage rapide et efficace de votre installation.</p>
+
+                <h3>INSTALLATION CHAUFFAGE</h3>
+                <p>Atelier Control + et son équipe de chauffagistes qualifiés, vous conseillent et garantissent l’installation de votre chauffage dans les règles de l’art. Une étude approfondie de votre projet sera réalisée afin de vous proposer les meilleures solutions pour le choix et l’installation de votre chauffage. Partenaire des plus grandes marques de chauffage, nous pouvons ainsi vous garantir l’installation de chaudières ou pompes à chaleurs les plus fiables du marché.
+                Dans un souci écologique et pour que vous réalisiez un maximum d’économie sur vos factures énergétiques, nous proposons l’installation de pompe à chaleur air/eau, de pompe à chaleur air/air (climatisation réversible) ou de chaudière gaz à condensation ou à basse température.
+                </p>
+
+                <h3>CONTRAT D’ENTRETIEN</h3>
+                <p>
+                    Quelque soit le système de chauffage utilisé, il est important de l’entretenir pour une efficacité maximale et pour limiter le risque de panne. Nous proposons différents contrats d’entretien incluant le nettoyage de la chaudière/pompe à chaleur, la vérification des organes de sécurité et le nettoyage du conduit de fumée.
+                </p>
+
+                <h3>DÉPANNAGE CHAUFFAGE</h3>
+                <p>
+                    Vous êtes en panne de chauffage ? Un problème avec votre chaudière ou votre pompe à chaleur ? 
+                    Atelier Control + et son équipe de chauffagistes interviennent à Maisons-Alfort et aux alentours pour un dépannage rapide et efficace.
+                </p>
+            </div>
+        </section>
+        <!-- Plomberie Section (Initially Hidden) -->
+        <section id="plomberie-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">PLOMBERIE</h2>
+                <h3 class="highlight">POUR VOS TRAVAUX DE PLOMBERIE, ASSAINISSEMENT OU GAZ</h3>
+                <p>Atelier Control + intervient pour différents types de travaux de la plomberie courante.</p>
+
+                <div class="plomberie-grid">
+                    <div class="plomberie-category">
+                        <h3>PLOMBERIE</h3>
+                        <ul>
+                            <li>➕ Remplacement de ballon d’eau chaude toute capacité</li>
+                            <li>➕ Toute robinetterie</li>
+                            <li>➕ Toilette complet</li>
+                            <li>➕ Mécanisme de chasse</li>
+                            <li>➕ Chasse d’eau pour WC complet</li>
+                            <li>➕ Remplacement de joint</li>
+                            <li>➕ Robinet quart de tour colonne immeuble</li>
+                            <li>➕ Baignoires</li>
+                            <li>➕ Installation cuisine et bain</li>
+                            <li>➕ Etc ...</li>
+                        </ul>
+                    </div>
+
+                    <div class="plomberie-category">
+                        <h3>ASSAINISSEMENT</h3>
+                        <ul>
+                            <li>➕ Remplacement de réseaux (PVC et fonte)</li>
+                            <li>➕ Visualisation caméra</li>
+                            <li>➕ Dégorgement domestique</li>
+                            <li>➕ Etc ...</li>
+                        </ul>
+                    </div>
+
+                    <div class="plomberie-category">
+                        <h3>GAZ</h3>
+                        <ul>
+                            <li>➕ Remise au conformité d’installation</li>
+                            <li>➕ Pose robinet RAOI normalisé de gaz</li>
+                            <li>➕ Flexible de gaz (garantie à vie)</li>
+                            <li>➕ Ventilation haute et basse</li>
+                            <li>➕ Etc ...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contrat d'Entretien Section (Initially Hidden) -->
+        <section id="contrat-entretien-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">CONTRAT D’ENTRETIEN</h2>
+                <h3 class="highlight">ENTRETIEN DE CHAUDIÈRE OU POMPE À CHALEUR</h3>
+                <p>
+                    Atelier Control + vous propose trois contrats d’entretien pour votre équipement de chauffage 
+                    (chaudière, pompe à chaleur, etc..) afin de répondre à tous vos besoins.
+                </p>
+
+                <div class="entretien-grid">
+                    <!-- Base 1 Plan -->
+                    <div class="entretien-card">
+                        <h4>BASE 1 – 105€</h4>
+                        <ul>
+                            <li>➕ Nettoyage de l’appareil</li>
+                            <li>➕ Vérification des organes de sécurité</li>
+                            <li>➕ Nettoyage du conduit de fumée</li>
+                            <li>➕ Prioritaire pour tous les dépannages sous 24H</li>
+                        </ul>
+                    </div>
+
+                    <!-- Avantage Plan -->
+                    <div class="entretien-card">
+                        <h4>AVANTAGE – 135€</h4>
+                        <ul>
+                            <li>➕ Nettoyage de l’appareil</li>
+                            <li>➕ Vérification des organes de sécurité</li>
+                            <li>➕ Nettoyage du conduit de fumée</li>
+                            <li>➕ Prioritaire pour tous les dépannages sous 24H</li>
+                            <li>➕ +2 dépannages incluant Main d’œuvre et Déplacement</li>
+                        </ul>
+                    </div>
+
+                    <!-- NRJ Nouvelles Plan -->
+                    <div class="entretien-card">
+                        <h4>NRJ NOUVELLES – 188€</h4>
+                        <ul>
+                            <li>➕ Un passage par an</li>
+                            <li>➕ Vérification des organes de sécurité</li>
+                            <li>➕ Nettoyage des échangeurs et des condenseurs (PAC)</li>
+                            <li>➕ Nettoyage des capteurs solaires</li>
+                            <li>➕ Vérification des pressions eau et gaz</li>
+                            <li>➕ Vérification des débits d’eau (Pièce non incluse)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Zones d'Intervention Section (Initially Hidden) -->
+        <section id="zones-intervention-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">ZONES D’INTERVENTIONS</h2>
+                <h3 class="highlight">PLOMBIER / CHAUFFAGISTE DANS LE 94</h3>
+                <p>
+                    Bien que Atelier Control + soit basée à Maisons-Alfort, nous intervenons également pour tout projet de chauffage ou 
+                    de plomberie dans tout le département du Val de Marne (94).
+                </p>
+
+                <ul class="zones-list">
+                    <li>➕ <span class="zone">Créteil</span></li>
+                    <li>➕ <span class="zone">Alfortville</span></li>
+                    <li>➕ <span class="zone">Saint-Maur</span></li>
+                    <li>➕ <span class="zone">Maisons-Alfort</span></li>
+                    <li>➕ <span class="zone">Champigny-sur-Marne</span></li>
+                    <li>➕ <span class="zone">Vitry-sur-Seine</span></li>
+                </ul>
+
+                <p>
+                    Et vous recherchez des plombiers et/ou chauffagistes qualifiés, n’attendez plus et 
+                    <a href="#contact" class="contact-link">contactez-nous</a>.
+                </p>
+            </div>
+        </section>
+        <!-- Réalisations Section (Initially Hidden) -->
+        <section id="realisations-section" class="presentation" style="display: none;">
+            <div class="container">
+                <h2 class="title">RÉALISATIONS</h2>
+                <h3 class="highlight">NOS RÉALISATIONS EN PLOMBERIE, CHAUFFAGE, CLIMATISATION, POMPES À CHALEUR</h3>
+            </div>
+        </section>
+        <section id="contact-section" class="presentation">
+            <div class="container">
+                <h2 class="title">MON COMPTE</h2>
+                
+                <!-- If User is Logged In -->
+                <div id="user-info" style="text-align: center; display: none;">
+                    <h3>Bienvenue, <span id="user-email"></span></h3>
+                    <button id="logout-btn">Déconnexion</button>
+                </div>
+        
+                <!-- If No User is Logged In -->
+                <div id="auth-container" class="auth-grid">
+                    <!-- Left: Login -->
+                    <div class="auth-box">
+                        <h3>Connexion</h3>
+                        <form id="login-form">
+                            <input type="email" id="login-email" placeholder="Email" required>
+                            <input type="password" id="login-password" placeholder="Mot de passe" required>
+                            <button type="submit">Se connecter</button>
+                        </form>
+                        
+                    </div>
+        
+                    <!-- Right: Sign Up -->
+                    <div class="auth-box">
+                        <h3>Inscription</h3>
+                        <form id="auth-form">
+                            <input type="email" id="register-email" placeholder="Email" required>
+                            <input type="password" id="register-password" placeholder="Mot de passe" required>
+                            <button type="submit">S'inscrire</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script type="module" src="../js/auth.js"></script>
+        <!-- Formulaire de devis à droite -->
+        <div class="quote-form-container">
+            <div class="quote-form-header">
+                <i class="fa fa-file"></i>
+                <span>DEMANDEZ VOTRE DEVIS</span>
+            </div>
+            <form>
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="tel" name="phone" placeholder="N° de téléphone" required>
+                <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <textarea name="details" placeholder="Détails pour votre devis" required></textarea>
+                <button type="submit">ENVOYER</button>
+            </form>
+        </div>
+        
+    </div>
+</section>
+
+    
+
+    <section id="services" class="content">
+        <h2>Nos Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="../images/plomberie.jpg" alt="Plomberie">
+                <h3>Plomberie</h3>
+                <p>Installation et dépannage de plomberie.</p>
+            </div>
+            <div class="service-item">
+                <img src="../images/climatisation.jpg" alt="Climatisation">
+                <h3>Climatisation</h3>
+                <p>Vente et installation de climatiseurs.</p>
+            </div>
+            <div class="service-item">
+                <img src="../images/chauffage.jpg" alt="Chauffage">
+                <h3>Chauffage</h3>
+                <p>Installation et entretien de chauffage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="content">
+        <h2>Nos Certifications</h2>
+        <div class="certifications-list">
+            <img src="../images/cert1.jpg" alt="Certification 1">
+            <img src="../images/cert2.jpg" alt="Certification 2">
+            <img src="../images/cert3.jpg" alt="Certification 3">
+            <img src="../images/cert4.jpg" alt="Certification 4">
+            <img src="../images/cert5.jpg" alt="Certification 5">
+            <img src="../images/cert6.jpg" alt="Certification 6">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Left Section -->
+            <div class="footer-left">
+                <img src="../images/footer-logo.png" alt="Atelier Control Logo" class="footer-logo">
+                <p>Chauffagiste et Plombier dans le 94 (Val-de-Marne) : Installation, Entretien, Dépannage.</p>
+            </div>
+    
+            <!-- Middle Section - Services -->
+            <div class="footer-column">
+                <h3>Nos Services</h3>
+                <ul>
+                    <li><i class="fa fa-check"></i> Plomberie</li>
+                    <li><i class="fa fa-check"></i> Climatisation</li>
+                    <li><i class="fa fa-check"></i> Chauffage</li>
+                    <li><i class="fa fa-check"></i> Contrat d’entretien</li>
+                </ul>
+            </div>
+    
+            <!-- Middle Section - Zones d’intervention -->
+            <div class="footer-column">
+                <h3>Zones d’interventions</h3>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i> Créteil</li>
+                    <li><i class="fa fa-map-marker"></i> Saint-Maur</li>
+                    <li><i class="fa fa-map-marker"></i> Maisons-Alfort</li>
+                    <li><i class="fa fa-map-marker"></i> Champigny-sur-Marne</li>
+                    <li><i class="fa fa-map-marker"></i> Vitry-sur-Seine</li>
+                    <li><i class="fa fa-map-marker"></i> Alfortville</li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-column footer-contact">
+                <h3>Contactez-nous</h3>
+                <ul>
+                    <li><i class="fa fa-envelope"></i> contact@ateliercontrol.com</li>
+                    <li><i class="fa fa-phone"></i> 01 41 79 30 35</li>
+                    <li><i class="fa fa-print"></i> 01 56 29 26 78</li>
+                    <li><i class="fa fa-home"></i> 68 avenue du Général Leclerc, 94700 MAISONS-ALFORT</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>Site internet réalisé par Picchu development</p>
+            <p>&copy; 2025 Atelier Control + - Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
